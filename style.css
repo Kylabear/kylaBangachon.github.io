@@ -88,6 +88,7 @@ section {
 }
 header {
   color: black
+  
 }
 .Hobbies-list {
   list-style-type: none;
@@ -96,14 +97,17 @@ header {
   display: flex;
   flex-wrap: wrap; 
   justify-content: space-around;
-  width: 80%; 
+  width: 80%;
+  margin: 0 auto;
+  text-align: center; 
 }
+
 
 .Hobbies-list li {
   width: 90%; 
   text-align: center;
-  margin: 20px;
-  padding: 20px;
+  margin: 30px;
+  padding: 30px;
   border: 1px solid #ccc; 
   color: rgb(239, 233, 233); 
 
@@ -115,6 +119,7 @@ header {
 
 .Hobbies-list p {
   text-align: center;
+
 }
 
 .hobby-image {
