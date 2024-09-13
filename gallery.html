@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Gallery</title>
-    <link rel="styleheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
     <style>
         body {
             background-image: url("img/bckg.jpg");
             background-size: cover;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
             color: #fff;
             text-align: center;
             margin: 0;
@@ -24,43 +26,21 @@
         }
 
         section {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
             padding: 20px;
         }
 
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            text-align: center;
+        .gallery-section {
+            margin-bottom: 50px;
         }
 
-        li {
-            margin: 20px;
-            background-color: rgba(99, 93, 93, 0.317);
-            padding: 350px;
-            border-radius: 10px;
-            box-shadow: 0 20px 28px rgba(0, 0, 0, 0.3);
-            width: 300px;
-        }
-
-        img {
-            max-width: 100%;
-            height: 50;
-            border-radius: 50px;
-            width: 200;
-        }
-
-        h2 {
+        .gallery-title {
             margin-bottom: 30px;
         }
 
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 5px;
+            gap: 10px;
         }
 
         .gallery div {
@@ -73,8 +53,7 @@
         .gallery img {
             width: 100%;
             height: auto;
-            border-radius: 20px;
-            grid-template-rows: repeat(auto-fill);
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -83,73 +62,43 @@
         <h1>Hi, Welcome to My Gallery</h1>
     </header>
     <section>
-        <ul>
-            <li>
-                <h2>Top K-Dramas</h2>
-                <div class="gallery">
-                    <img src="img/Kdrama1.jpg" alt="Top K-Drama Image">
-                    <img src="img/kdrama2.jpg" alt="Top K-Drama Image">
-                    <img src="img/kdrama5.jpg" alt="Top K-Drama Image">
-                    <img src="img/kdrama10.jpg" alt="Top K-Drama Image">
-                    <img src="img/kdrama11.jpg" alt="Top K-Drama Image">
-                    <img src="img/kdrama12.jpg" alt="Top K-Drama Image">
-                    <img src="img/kdrama13.jpg" alt="Top K-Drama Image">
-                    <img src="img/kdrama14.jpg" alt="Top K-Drama Image">
-                    <img src="img/kdrama15.jpg" alt="Top K-Drama Image">
-                    <img src="img/kdrama16.jpg" alt="Top K-Drama Image">
-                    <img src="img/kdrama17.jpg" alt="Top K-Drama Image">
-                    <img src="img/kdrama18.jpg" alt="Top K-Drama Image">
-                    <img src="img/kdrama19.jpeg" alt="Top K-Drama Image">
-                    <img src="img/kdrama20.jpg" alt="Top K-Drama Image">
-                    <img src="img/krdrama8.jpg" alt="Top K-Drama Image">
-                    <img src="img/krdrama7.jpg" alt="Top K-Drama Image">
-                    <img src="img/kdrama6.jpg" alt="Top K-Drama Image">
-                    <img src="img/kdrama9.jpg" alt="Top K-Drama Image">
-                    <img src="img/krama3.jpg" alt="Top K-Drama Image">
-                    <img src="img/krama4.jpg" alt="Top K-Drama Image">
-    
-                </div>
-            </li>
-            <li>
-                <h2>Top F-Actors</h2>
-                <div class="gallery">
-                    <div><img src="img/act1.jpg" alt="Top F-Actors"></div>
-                    <div><img src="img/act2.jpg" alt="Top F-Actors"></div>
-                    <div><img src="img/act3.jpg" alt="Top F-Actors"></div>
-                    <div><img src="img/act4.jpg" alt="Top F-Actors"></div>
-                    <div><img src="img/act5.jpeg" alt="Top F-Actors"></div>
-                    <div><img src="img/act6.jpg" alt="Top F-Actors"></div>
-                    <div><img src="img/act7.jpg" alt="Top F-Actors"></div>
-                    <div><img src="img/act8.jpg" alt="Top F-Actors"></div>
-                    <div><img src="img/act9.jpg" alt="Top F-Actors"></div>
-                    <div><img src="img/act10.jpg" alt="Top F-Actors"></div>
-                    <div><img src="img/act11.jpg" alt="Top F-Actors"></div>
-                    <div><img src="img/act12.jpg" alt="Top F-Actors"></div>
-                    <div><img src="img/act13.jpg" alt="Top F-Actors"></div>
-                    <div><img src="img/act14.jpg" alt="Top F-Actors"></div>
-                    <div><img src="img/act15.jpg" alt="Top F-Actors"></div>
-                    <div><img src="img/act16.jpg" alt="Top F-Actors"></div>
-                    <div><img src="img/act18.jpg" alt="Top F-Actors"></div>
-                    <div><img src="img/act19.jpg" alt="Top F-Actors"></div>
-                    <div><img src="img/act19.jpg" alt="Top F-Actors"></div>
-                    <div><img src="img/act20.jpg" alt="Top F-Actors"></div>
-                    <div><img src="img/act21.jpg" alt="Top F-Actors"></div>
-                    <div><img src="img/act22.jpg" alt="Top F-Actors"></div>
+        <!-- First Gallery: Top K-Dramas -->
+        <div class="gallery-section">
+            <h2 class="gallery-title">Top K-Dramas</h2>
+            <div class="gallery">
+                <div><img src="img/Kdrama1.jpg" alt="K-Drama 1"></div>
+                <div><img src="img/kdrama2.jpg" alt="K-Drama 2"></div>
+                <div><img src="img/kdrama5.jpg" alt="K-Drama 5"></div>
+                <div><img src="img/kdrama10.jpg" alt="K-Drama 10"></div>
+                <div><img src="img/kdrama12.jpg" alt="K-Drama 12"></div>
+                <div><img src="img/kdrama13.jpg" alt="K-Drama 13"></div>
+                <div><img src="img/kdrama14.jpg" alt="K-Drama 14"></div>
+                <div><img src="img/kdrama15.jpg" alt="K-Drama 15"></div>
+            </div>
+        </div>
 
-                    
-                </div>
-            </li>
-            <li>
-                <h2>Tanabata Festival @ UC 2023</h2>
-                <div class="gallery">
-                    <div><img src="img/Tanabata1.jpg" alt="Tanabata Festival Image"></div>
-                    <div><img src="img/Tanabata4.jpg" alt="Tanabata Festival Image"></div>
-                    <div><img src="img/Tanabata2.jpg" alt="Tanabata Festival Image"></div>
-                    <div><img src="img/Tanabata3.jpg" alt="Tanabata Festival Image"></div>
-                    
-                </div>
-            </li>
-        </ul>
+        <!-- Second Gallery: Top F-Actors -->
+        <div class="gallery-section">
+            <h2 class="gallery-title">Top F-Actors</h2>
+            <div class="gallery">
+                <div><img src="img/act1.jpg" alt="Actor 1"></div>
+                <div><img src="img/act2.jpg" alt="Actor 2"></div>
+                <div><img src="img/act3.jpg" alt="Actor 3"></div>
+                <div><img src="img/act4.jpg" alt="Actor 4"></div>
+                <div><img src="img/act5.jpeg" alt="Actor 5"></div>
+            </div>
+        </div>
+
+        <!-- Third Gallery: Tanabata Festival -->
+        <div class="gallery-section">
+            <h2 class="gallery-title">Tanabata Festival @ UC 2023</h2>
+            <div class="gallery">
+                <div><img src="img/Tanabata1.jpg" alt="Tanabata Festival 1"></div>
+                <div><img src="img/Tanabata2.jpg" alt="Tanabata Festival 2"></div>
+                <div><img src="img/Tanabata3.jpg" alt="Tanabata Festival 3"></div>
+                <div><img src="img/Tanabata4.jpg" alt="Tanabata Festival 4"></div>
+            </div>
+        </div>
     </section>
 </body>
 </html>
