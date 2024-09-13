@@ -129,3 +129,45 @@ header {
   margin: 0 auto;
   border-radius: 10px; 
 }
+
+/* gallery*/
+
+body {
+  background-image: url("img/galleryC.jpg");
+  background-size: cover;
+  font-family: sans-serif;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+ul.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+ul.gallery li {
+  margin: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  max-width: 300px; /* Set a maximum width for each gallery item */
+}
+
+ul.gallery .gallery-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+ul.gallery .gallery-images img {
+  max-width: 96%;
+  height: auto;
+  border-radius: 10px;
+  margin: 20px; /* Add margin between images */
+}
+
