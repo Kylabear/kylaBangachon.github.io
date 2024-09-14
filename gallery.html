@@ -23,18 +23,39 @@
 
         h1 {
             margin: 0;
+            color: #ece5e5;
         }
 
-        section {
-            padding: 20px;
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .tab {
+            background-color: rgba(188, 63, 63, 0.7);
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            color: #fff;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .tab:hover {
+            background-color: rgba(188, 63, 63, 1);
+        }
+
+        .tab.active {
+            background-color: rgba(188, 63, 63, 1);
         }
 
         .gallery-section {
-            margin-bottom: 50px;
+            display: none;
         }
 
-        .gallery-title {
-            margin-bottom: 30px;
+        .gallery-section.active {
+            display: block;
         }
 
         .gallery {
@@ -47,7 +68,7 @@
             background-color: rgba(0, 0, 0, 0.7);
             padding: 10px;
             border-radius: 10px;
-            box-shadow: 0 20px 28px rgba(87, 83, 83, 0.174);
+            box-shadow: 0 20px 28px rgba(87, 83, 83, 0.082);
         }
 
         .gallery img {
@@ -61,9 +82,16 @@
     <header>
         <h1>Hi, Welcome to My Gallery</h1>
     </header>
+
+
+    <div class="tabs">
+        <div class="tab active" onclick="showTab(0)">Top K-Dramas</div>
+        <div class="tab" onclick="showTab(1)">Top F-Actors</div>
+        <div class="tab" onclick="showTab(2)">Tanabata Festival @ UC 2023</div>
+    </div>
+
     <section>
-        <!-- First Gallery: Top K-Dramas -->
-        <div class="gallery-section">
+        <div class="gallery-section active">
             <h2 class="gallery-title">Top K-Dramas</h2>
             <div class="gallery">
                 <div><img src="img/Kdrama1.jpg" alt="K-Drama 1"></div>
@@ -74,10 +102,27 @@
                 <div><img src="img/kdrama13.jpg" alt="K-Drama 13"></div>
                 <div><img src="img/kdrama14.jpg" alt="K-Drama 14"></div>
                 <div><img src="img/kdrama15.jpg" alt="K-Drama 15"></div>
+                <div><img src="img/kdrama3.jpg" alt="K-Drama 3"></div>
+                <div><img src="img/kdrama4.jpg" alt="K-Drama 4"></div>
+                <div><img src="img/kdrama6.jpg" alt="K-Drama 6"></div>
+                <div><img src="img/krdrama7.jpg" alt="K-Drama 7"></div>
+                <div><img src="img/krdrama8.jpg" alt="K-Drama 8"></div>
+                <div><img src="img/kdrama9.jpg" alt="K-Drama 9"></div>
+                <div><img src="img/kdrama11.jpg" alt="K-Drama 11"></div>
+                <div><img src="img/kdrama16.jpg" alt="K-Drama 16"></div>
+                <div><img src="img/kdrama17.jpg" alt="K-Drama 17"></div>
+                <div><img src="img/kdrama18.jpg" alt="K-Drama 18"></div>
+                <div><img src="img/kdrama19.jpeg" alt="K-Drama 19"></div>
+                <div><img src="img/kdrama20.jpg" alt="K-Drama 20"></div>
+                <div><img src="img/kdrama21.jpg" alt="K-Drama 21"></div>
+                <div><img src="img/kdrama22.jpg" alt="K-Drama 22"></div>
+                <div><img src="img/kdrama23.jpg" alt="K-Drama 23"></div>
+                <div><img src="img/kdrama24.jpg" alt="K-Drama 24"></div>
+
+
             </div>
         </div>
 
-        <!-- Second Gallery: Top F-Actors -->
         <div class="gallery-section">
             <h2 class="gallery-title">Top F-Actors</h2>
             <div class="gallery">
@@ -86,10 +131,34 @@
                 <div><img src="img/act3.jpg" alt="Actor 3"></div>
                 <div><img src="img/act4.jpg" alt="Actor 4"></div>
                 <div><img src="img/act5.jpeg" alt="Actor 5"></div>
+                <div><img src="img/act6.jpg" alt="Actor 6"></div>
+                <div><img src="img/act7.jpg" alt="Actor 7"></div>
+                <div><img src="img/act8.jpg" alt="Actor 8"></div>
+                <div><img src="img/act9.jpg" alt="Actor 9"></div>
+                <div><img src="img/act10.jpg" alt="Actor 10"></div>
+                <div><img src="img/act11.jpg" alt="Actor 11"></div>
+                <div><img src="img/act12.jpg" alt="Actor 12"></div>
+                <div><img src="img/act13.jpg" alt="Actor 13"></div>
+                <div><img src="img/act14.jpg" alt="Actor 14"></div>
+                <div><img src="img/act15.jpg" alt="Actor 15"></div>
+                <div><img src="img/act16.jpg" alt="Actor 16"></div>
+                <div><img src="img/act17.jpg" alt="Actor 17"></div>
+                <div><img src="img/act18.jpg" alt="Actor 18"></div>
+                <div><img src="img/act19.jpg" alt="Actor 19"></div>
+                <div><img src="img/act20.jpg" alt="Actor 20"></div>
+                <div><img src="img/act21.jpg" alt="Actor 21"></div>
+                <div><img src="img/act22.jpg" alt="Actor 22"></div>
+                <div><img src="img/act23.jpg" alt="Actor 23"></div>
+                <div><img src="img/act24.jpg" alt="Actor 24"></div>
+                <div><img src="img/act25.jpg" alt="Actor 25"></div>
+                <div><img src="img/act26.jpg" alt="Actor 26"></div>
+                <div><img src="img/act27.jpeg" alt="Actor 27"></div>
+                <div><img src="img/act28.jpg" alt="Actor 28"></div>
+                <div><img src="img/act29.jpg" alt="Actor 29"></div>
+                <div><img src="img/act30.jpg" alt="Actor 30"></div>
             </div>
         </div>
 
-        <!-- Third Gallery: Tanabata Festival -->
         <div class="gallery-section">
             <h2 class="gallery-title">Tanabata Festival @ UC 2023</h2>
             <div class="gallery">
@@ -97,8 +166,30 @@
                 <div><img src="img/Tanabata2.jpg" alt="Tanabata Festival 2"></div>
                 <div><img src="img/Tanabata3.jpg" alt="Tanabata Festival 3"></div>
                 <div><img src="img/Tanabata4.jpg" alt="Tanabata Festival 4"></div>
+                <div><img src="img/Tanabata5.jpg " alt="Tanabata Festival 5"></div>
+                <div><img src="img/Tanabata6.jpg " alt="Tanabata Festival 6"></div>
+                <div><img src="img/Tanabata7.jpg " alt="Tanabata Festival 7"></div>
+                <div><img src="img/Tanabata8.jpg " alt="Tanabata Festival 8"></div>
+                <div><img src="img/Tanabata9.jpg " alt="Tanabata Festival 9"></div>
+                <div><img src="img/Tanabata10.jpg " alt="Tanabata Festival 10"></div>
+
             </div>
-        </div>
+        </div>  
     </section>
+
+    <script>
+        function showTab(index) {
+            const tabs = document.querySelectorAll('.tab');
+            const sections = document.querySelectorAll('.gallery-section');
+
+            tabs.forEach((tab, i) => {
+                tab.classList.remove('active');
+                sections[i].classList.remove('active');
+            });
+            
+            tabs[index].classList.add('active');
+            sections[index].classList.add('active');
+        }
+    </script>
 </body>
 </html>

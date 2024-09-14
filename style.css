@@ -1,80 +1,205 @@
-.footer-icons {
-    list-style-type: none; 
-    display: flex; 
-  }
+/* About Me */
+body {
+  font-family: Garamond, serif;
+  margin: 0;
+  background-color: #f4f4f4;
+  color: #070606;
+  background-image: url('img/HomeC.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh; 
+}
+
+/* Background images for each section */
+#education {
+  background-image: url('img/educatio.jpg');
+  background-size: contain; /* Adjust to fit the section */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#goals {
+  background-image: url('img/goal.jpg');
+  background-size: contain; /* Adjust to fit the section */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#personal-philosophy {
+  background-image: url('img/perso.jpg');
+  background-size: contain; /* Adjust to fit the section */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#fun-facts {
+  background-image: url('img/fun.jpg');
+  background-size: contain; /* Adjust to fit the section */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* Add overlay to the sections with background images */
+.tab-content {
+  position: relative; /* Ensure the pseudo-element is positioned correctly */
+  overflow: hidden;
+  text-align: left ;
+}
+
+.tab-content::before {
+  content: ""; /* Required to create the pseudo-element */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Adjust the rgba value to set the overlay color and transparency */
+  z-index: 1; /* Ensure the overlay is above the background image but below the text */
+}
+
+.tab-content h2, .tab-content p, .tab-content ul, .tab-content blockquote {
+  position: relative; /* Ensure text is above the overlay */
+  z-index: 2; /* Ensure text is above the overlay */
+}
+
+/* Background images for each section */
+#education {
+  background-image: url('img/educatio.jpg');
+  background-size: cover; /* Ensure the image covers the section */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#goals {
+  background-image: url('img/goal.jpg');
+  background-size: cover; /* Ensure the image covers the section */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#personal-philosophy {
+  background-image: url('img/perso.jpg');
+  background-size: cover; /* Ensure the image covers the section */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#fun-facts {
+  background-image: url('img/fun.jpg');
+  background-size: cover; /* Ensure the image covers the section */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.flex-item {
+  position: relative;
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  overflow: hidden; 
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); 
+  border-radius: 15px;
+  min-height: 500px; 
+  transition: transform 0.3s ease; 
+}
+
+.flex-item:hover {
+  transform: scale(1.05); 
+}
+
+.flex-item > * {
+  position: relative;
+  z-index: 2;
+  background-size: auto;
+
   
-  .footer-icons li {
-    margin-right: 20px;
+}
+
+.flex-item {
+  min-height: 300px;
+}
+
+.education::before,
+.fun-facts::before,
+.personal-philosophy::before,
+.goals::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+
+  z-index: 1;
+
+}
+
+
+h1, h2 {
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+}
+
+p {
+  color: #e4e4e4;
+}
+
+
+section {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .flex-item {
+      background-size: cover;
+      background-position: center;
+      min-height: 400px; 
   }
-  
-  .footer-icons img {
-    width: 16px; 
-    height: 16px; 
+}
+
+@media (max-width: 480px) {
+  .flex-item {
+      background-size: cover;
+      background-position: top; 
+      min-height: 350px;
   }
 
-  .footer {
-    text-align: center !important;
-    background-color: #f0f0f0;
-    padding: 10px;
- } 
- .footer p {
-    display: inline-block;}
-    
-  body {
-      font-family: Garamond, serif;
-  }
-  
-  header {
-      text-align: center;
-      background-color: #f0ebeb;
-      padding: 10px;
-      width: 100%;
-  }
-  
-  section {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      margin: 20px;
-  }
-  
   img {
-      width: 250px;
-      height: auto;
-      margin-right: 20px;
+    width: 120px;
   }
-  
+
   p {
-      max-width: 500px;
-      margin: 20;
-      text-align: center;
+    font-size: 14px;
   }
-  
-  footer {
-      text-align: center;
-      background-color: #f0f0f0;
-      padding: 10px;
+
+  .flex-item {
+    max-width: 100%;
+    text-align: center;
+    padding: 15px;
   }
-  
-  .footer-icons {
-      list-style-type: none;
-      display: flex;
-  }
-  
-  .footer-icons li {
-      margin-right: 20px;
-  }
-  
-  .footer-icons img {
-      width: 16px;
-      height: 16px;
-  }
-  
-  .footer p {
-      display: inline-block;
-  }
-  
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.flex-item {
+  animation: fadeIn 1s ease-in;
+}
+
 /* hobbies */
 
 body {
@@ -148,6 +273,14 @@ img {
   border-radius: 10px;
 }
 
+.gallery img {
+  width: 100%;
+  height: 150px; 
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
 .gallery-section {
   margin-bottom: 50px;
 }
@@ -164,8 +297,8 @@ img {
 }
 
 .gallery div {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(158, 15, 15, 0.7);
   padding: 10px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(57, 56, 56, 0.13);
 }

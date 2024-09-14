@@ -1,88 +1,234 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
+    <link rel="stylesheet" href="style.css">
+    
     <style>
+
         body {
             font-family: Garamond, serif;
-        }
-        header {
-            text-align: center;
-            background-color: #f0ebeb;
-            padding: 10px;
-            width: 100%;
-        }
-        section {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            margin: 20px;
-
-        }
-        img {
-            width: 250px;
-            height: auto;
-            margin-right: 20px;
-        }
-        p {
-            max-width: 500px;
-            margin: 20;
-            text-align: center;
-        }
-        footer {
-            text-align: center;
-            background-color: #f0f0f0;
-            padding: 10px;
-        }
-        .footer-text {
-            text-align: center; 
-        }
-       .footer-icons li {
-            margin-right: 10px;
-        }
-        .footer p {
-            display: inline-block;
-}
-
-    </style>
-    <style>
-        body {
-            background-image: url("img/HomeC.jpg");
-            background-size: cover;
+            margin: 0;
+            background-color: #f4f4f4;
+            color: #e4dfdf;
+            background-image: url('img/HomeC.jpg'); 
+            background-size: cover; 
+            background-position: center; 
             background-repeat: no-repeat;
         }
+
+        header {
+            text-align: center;
+            background-color: #0f1011f9;
+            padding: 20px;
+            width: 100%;
+        }
+
         section {
+            text-align: center;
+            margin: 20px;
+            padding: 20px;
+            background: transparent;
+            border-radius: 10px;
+        }
+
+
+        .tab-container {
+            width: 80%;
+            margin: 50px auto;
+        }
+
+        .tab {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 0 10px;
+            border-radius: 5px;
+        }
+
+        .tab:hover {
+            background-color: #555;
+        }
+
+        .tab-content {
+            display: none; 
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 10px;
             color: white;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            background-size: cover; 
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .active-tab-content {
+            display: block;
+        }
+
+        .tab-content h2 {
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .tab-content p, .tab-content ul, .tab-content blockquote {
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer-icons {
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            list-style: none;
+        }
+
+        .footer-icons li {
+            margin: 0 10px;
+        }
+
+        .footer-icons img {
+            width: 24px;
+            height: 24px;
+            transition: transform 0.3s;
+        }
+
+        .footer-icons img:hover {
+            transform: scale(1.2);
+        }
+
+
+        #education {
+            background-image: url('img/educatio.jpg');
+        }
+
+        #goals {
+            background-image: url('img/goal.jpg');
+        }
+
+        #personal-philosophy {
+            background-image: url('img/perso.jpg');
+        }
+
+        #fun-facts {
+            background-image: url('img/fun.jpg');
+        }
+
+
+        @media (max-width: 768px) {
+            .tab {
+                padding: 8px 15px;
+                font-size: 14px;
+            }
+
+            .tab-content {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .tab {
+                padding: 5px 10px;
+                font-size: 12px;
+            }
+
+            .tab-content {
+                font-size: 12px;
+            }
         }
     </style>
-    
-    
 </head>
 <body>
     <header>
         <h1>Welcome to My Personal Website!</h1>
     </header>
-    <section>
 
-        <img src= "img/kylaB.jpg.jpg" alt= "My Profile Pic">
-        <p>Hello, I'm Alpha Kyla Bangachon a passionate and driven student pursuing
-            a Bachelor of Science in Information Technology with a specialization in Web Development
-            at the University of the Cordilleras in Baguio City. My journey into the world of web development
-            began with a fascination for the intricate interplay of code and design, and a desire to create
-            engaging and user-friendly online experiences. </p>
-
-            <p>Feel free to explore my Website, connect with me on Social Media, or reach out with any questions or collaborations: </p>
-
+    <section> 
+        <h2> About Me </h2>
+        <img src="img/kylaB.jpg.jpg" alt="My Profile Pic" style="width: 200px; border-radius: 25%; background: transparent;">
+        <p>Hello, I'm Alpha Kyla Bangachon, a passionate student <br>pursuing a Bachelor of Science in Information Technology<br> specializing in Web Development at the University of the Cordilleras,<br> Baguio City.My journey in web development began with a fascination for<br> the interaction of code<br> and design, and I aim to create engaging, user-friendly web experiences.</p>
     </section>
-    <footer>
 
-            <ul class="footer-icons" style="display: flex; list-style: none; padding: 0; justify-content: center;">
-                <li style="margin-right: 10px;"><a href="https://www.facebook.com/kyla.b3ar/"><img src="img/Fb_logo.jpg" alt="Facebook" style="width: 20px; height: 20px;"></a></li>
-                <li style="margin-right: 10px;"><a href="https://www.instagram.com/kyla.b3ar"><img src="img/IG_logo.jpg" alt="Instagram" style="width: 20px; height: 20px;"></a></li>
-                <li style="margin-right: 10px;"><a href="mailto:alphabangachon@gmail.com"><img src="img/Email_logo.jpg" alt="Email" style="width: 20px; height: 20px;"></a></li>
-            </ul>
+    <div class="tab-container">
+        <div class="tab" onclick="openTab(event, 'education')">Education</div>
+        <div class="tab" onclick="openTab(event, 'goals')">Goals & Aspirations</div>
+        <div class="tab" onclick="openTab(event, 'personal-philosophy')">Personal Philosophy</div>
+        <div class="tab" onclick="openTab(event, 'fun-facts')">Fun Facts</div>
+    </div>
+
+
+    <div id="education" class="tab-content">
+        <h2>Education</h2>
+        <p>I pursued Accountancy and Business Management at SMNHS SHS in Ifugao before embarking on my journey in Information Technology at the University of the Cordilleras.<br> This diverse educational background has provided me with a strong foundation in both the analytical and creative aspects of web development,<br> shaping my approach to solving complex problems and leading projects effectively.</p>
+    </div>
+
+    <div id="goals" class="tab-content">
+        <h2>Goals & Aspirations</h2>
+        <p>In the short term, my goal is to complete my degree in Information Technology and gain practical experience through internships, setting the stage for my future career. Looking ahead, I aspire to become a full-stack web developer, leading innovative projects that address real-world challenges. This journey is driven by my passion for meaningful work and my commitment to making a difference through technology.</p>
+    </div>
+
+    <div id="personal-philosophy" class="tab-content">
+        <h2>Personal Philosophy</h2>
+        <blockquote>"Strive not to be a success, but rather to be of value." – Albert Einstein</blockquote>
+        <p>This quote resonates deeply with me, guiding my approach to both personal and professional growth.<br> I believe that true fulfillment comes from making a positive impact and creating value for others, rather than merely seeking success for its own sake.</p>
+    </div>
+
+    <div id="fun-facts" class="tab-content">
+        <h2>Fun Facts About Me</h2>
+        <ul>
+            <li>I can solve a Rubik’s cube in under 1 minute and 30 seconds.</li>
+            <li>I'm from Ifugao.</li>
+            <li>I love mango and apple.</li>
+            <li>I'm a lifelong learner.</li>
+            <li>I'm a nocturnal person.</li>
+            <li>I love music.</li>
+            <li>I love Taekwondo.</li>
+            <li>I love black and white.</li>
+        </ul>
+    </div>
+
+    <div class="contact-section">
+        <p>Thank you for visiting my personal website! I’m excited about the future and always open to new opportunities and connections.<br> Whether you have a question, a project in mind, or just want to chat about web development or any of my interests, feel free to reach out.<br> You can contact me through your preferred contact method or connect with me on social media. I look forward to hearing from you!</p>
+    </div>    
+    <footer>
+        <ul class="footer-icons">
+            <li><a href="https://www.facebook.com/kyla.b3ar/"><img src="img/Fb_logo.jpg" alt="Facebook"></a></li>
+            <li><a href="https://www.instagram.com/kyla.b3ar"><img src="img/IG_logo.jpg" alt="Instagram"></a></li>
+            <li><a href="mailto:alphabangachon@gmail.com"><img src="img/Email_logo.jpg" alt="Email"></a></li>
+        </ul>
     </footer>
+
+    <script>
+
+        function openTab(evt, tabName) {
+
+            var tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(function(content) {
+                content.classList.remove('active-tab-content');
+            });
+
+            document.getElementById(tabName).classList.add('active-tab-content');
+
+            var tabs = document.querySelectorAll('.tab');
+            tabs.forEach(function(tab) {
+                tab.classList.remove('active');
+            });
+            evt.currentTarget.classList.add('active');
+        }
+    </script>
 </body>
-<script src="script_index.js"></script>
 </html>
