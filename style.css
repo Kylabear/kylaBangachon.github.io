@@ -8,85 +8,67 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh; 
+  min-height: 100vh;
 }
 
-/* Background images for each section */
-#education {
-  background-image: url('img/educatio.jpg');
-  background-size: contain; /* Adjust to fit the section */
-  background-position: center;
-  background-repeat: no-repeat;
+.active-tab-content {
+  display: block;
 }
 
-#goals {
-  background-image: url('img/goal.jpg');
-  background-size: contain; /* Adjust to fit the section */
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-#personal-philosophy {
-  background-image: url('img/perso.jpg');
-  background-size: contain; /* Adjust to fit the section */
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-#fun-facts {
-  background-image: url('img/fun.jpg');
-  background-size: contain; /* Adjust to fit the section */
-  background-position: center;
-  background-repeat: no-repeat;
-}
-/* Add overlay to the sections with background images */
 .tab-content {
-  position: relative; /* Ensure the pseudo-element is positioned correctly */
+  position: relative;
+  text-align: left;
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
   overflow: hidden;
-  text-align: left ;
 }
 
 .tab-content::before {
-  content: ""; /* Required to create the pseudo-element */
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3); /* Adjust the rgba value to set the overlay color and transparency */
-  z-index: 1; /* Ensure the overlay is above the background image but below the text */
+  background-image: url('img/educatio.jpg');
+  background-image: url('img/goal.jpg');
+  background-image: url('img/perso.jpg');
+  background-image: url('img/fun.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(30%); /* Adjust brightness */
+  z-index: 1;
 }
 
 .tab-content h2, .tab-content p, .tab-content ul, .tab-content blockquote {
-  position: relative; /* Ensure text is above the overlay */
-  z-index: 2; /* Ensure text is above the overlay */
+  position: relative;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.4); /* Adjust background color opacity */
 }
 
-/* Background images for each section */
+
+
 #education {
   background-image: url('img/educatio.jpg');
-  background-size: cover; /* Ensure the image covers the section */
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 #goals {
   background-image: url('img/goal.jpg');
-  background-size: cover; /* Ensure the image covers the section */
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 #personal-philosophy {
   background-image: url('img/perso.jpg');
-  background-size: cover; /* Ensure the image covers the section */
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 #fun-facts {
   background-image: url('img/fun.jpg');
-  background-size: cover; /* Ensure the image covers the section */
+
+}
+
+.tab-content {
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -94,34 +76,27 @@ body {
 
 .flex-item {
   position: relative;
-  background-size: cover; 
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   margin: 20px;
   padding: 20px;
   border-radius: 10px;
   color: white;
-  overflow: hidden; 
+  overflow: hidden;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); 
   border-radius: 15px;
-  min-height: 500px; 
-  transition: transform 0.3s ease; 
+  min-height: 500px;
+  transition: transform 0.3s ease;
 }
 
 .flex-item:hover {
-  transform: scale(1.05); 
+  transform: scale(1.05);
 }
 
 .flex-item > * {
   position: relative;
   z-index: 2;
-  background-size: auto;
-
-  
-}
-
-.flex-item {
-  min-height: 300px;
 }
 
 .education::before,
@@ -134,11 +109,8 @@ body {
   left: 0;
   width: auto;
   height: auto;
-
   z-index: 1;
-
 }
-
 
 h1, h2 {
   font-family: 'Poppins', sans-serif;
@@ -149,26 +121,34 @@ p {
   color: #e4e4e4;
 }
 
-
 section {
   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
   padding-bottom: 20px;
   margin-bottom: 30px;
 }
 
+.hobbies-list li {
+  padding: 10px;
+  font-size: 1.2em;
+}
+
 @media (max-width: 768px) {
   .flex-item {
-      background-size: cover;
-      background-position: center;
-      min-height: 400px; 
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+  }
+
+  .hobbies-list {
+    padding: 20px;
   }
 }
 
 @media (max-width: 480px) {
   .flex-item {
-      background-size: cover;
-      background-position: top; 
-      min-height: 350px;
+    background-size: cover;
+    background-position: top;
+    min-height: 350px;
   }
 
   img {
@@ -184,12 +164,15 @@ section {
     text-align: center;
     padding: 15px;
   }
+
+  .hobbies-list {
+    padding: 15px;
+  }
 }
 
 header h1 {
-    font-size: 24px;
+  font-size: 24px;
 }
-
 
 @keyframes fadeIn {
   from { opacity: 0; }
@@ -200,11 +183,16 @@ header h1 {
   animation: fadeIn 1s ease-in;
 }
 
+
 /* hobbies */
 
 body {
-  color: white;
-  
+  background-image: url('img/bckg.jpg');
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
+  color:white;
 }
 
 section {
@@ -267,6 +255,11 @@ body {
   padding: 0;
 }
 
+.gallery img:hover {
+  transform: scale(1.8); 
+}
+
+
 img {
   max-width: 100%;
   height: auto;
@@ -278,6 +271,7 @@ img {
   height: 150px; 
   object-fit: cover;
   border-radius: 10px;
+  transition: transform 0.3s ease;
 }
 
 

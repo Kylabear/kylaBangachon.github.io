@@ -1,38 +1,160 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Hobbies</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="style.css">
     <style>
-        .Hobbies-list p {
+
+        body {
+            font-family: 'Helvetica', sans-serif;
+            color: #151313;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
             text-align: center;
+            padding: 50px 20px;
+            background-color: #2f567d5e;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 48px;
+            margin: 0;
+            font-weight: 300;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 40px;
+            background-color: rgba(106, 138, 244, 0.064);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        section p {
+            text-align: center;
+            font-size: 20px;
+            color: #e9f0f0;
+        }
+
+    
+        .hobbies-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .hobby-item {
+            background-color: #2f7ce136;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .hobby-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .hobby-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .hobby-item h2 {
+            font-size: 26px;
+            color: #dceb0f;
+            margin-bottom: 10px;
+            font-family: cursive;
+        }
+
+        .hobby-item p {
+            font-size: 18px;
+            color: #e7efef;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
         }
     </style>
 </head>
-<body style="background-image: url('img/HobbiesC.jpg'); background-size: cover;">
+<body>
+
     <header>
-        <h1 style="font-size: 50px;">My Hobbies and Interests</h1>
+        <h1>My Hobbies & Interests</h1>
     </header>
+
+
     <section>
-        <p> <b>Here are some of my favorite Hobbies and Interests:</b></p>
-        <ul class="Hobbies-list">
-            <li>
-                <h2>Learning and Playing Instrument </h2> <br> <br>Exploring the world of music through different instruments.<br> From the soothing melodies of a piano to the rhythmic beats of a drum set, music is my passion and escape.<br></h2>
-                <img src="img/Instruments.jpg" alt="Learning and Playing Instrument" class="hobby-image">
+        <p><b>Discover some of my favorite hobbies and interests that keep me engaged and inspired:</b></p>
+        <ul class="hobbies-list">
+
+            <li class="hobby-item">
+                <img src="img/Instruments.jpg" alt="Learning and Playing Instrument">
+                <h2>Learning & Playing Instruments</h2>
+                <p>Music has always been a passion of mine, and learning new instruments is something I truly enjoy. I’ve been practicing the guitar and keyboard, and each day I discover something new about the art of making music. Playing an instrument is a creative outlet that allows me to express emotions, relax, and challenge myself to improve my skills. It’s also a way to connect with others through shared musical experiences, whether it's playing for friends or joining a jam session. I love how music can bring joy and inspire creativity.</p>
             </li>
-            <li>
-                <h2>Watching Korean Dramas</h2> <br> <br>Enjoying captivating Korean dramas with intriguing storylines.<br>Dive into the world of romance, suspense, and drama as I immerse myself in the rich storytelling of Korean television.</h2>
-                <img src="img/kdrama.jpg" alt="Watching Korean Dramas" class="hobby-image">
+
+
+            <li class="hobby-item">
+                <img src="img/kdrama.jpg" alt="Watching Korean Dramas">
+                <h2>Watching Korean Dramas</h2>
+                <p>One of my go-to ways to relax is watching Korean dramas. I’m captivated by the intricate storylines, deep emotions, and the visual beauty of each series. Whether it’s a romantic comedy or an action-packed thriller, K-dramas provide an escape from the everyday routine. I enjoy analyzing the character development, fashion, and cultural nuances present in the shows. Plus, watching Korean dramas helps me improve my language skills while indulging in some quality entertainment.</p>
             </li>
-            <li>
-                <h2>Learning Foreign Languages</h2> <br> <br>Immersing in the beauty of diverse languages and cultures.<br> From mastering the nuances of French to exploring the intricate characters of Mandarin, languages open doors to new worlds.<h2>
-                <img src="img/Languages.jpg" alt="Learning Foreign Languages" class="hobby-image">
+
+
+            <li class="hobby-item">
+                <img src="img/Languages.jpg" alt="Learning Foreign Languages">
+                <h2>Learning Foreign Languages</h2>
+                <p>Learning foreign languages has always fascinated me. I believe that languages are more than just words; they are windows into new cultures and ways of thinking. Currently, I'm focusing on improving my Korean and Japanese, and I enjoy practicing through apps, music, and conversations with native speakers. Learning a new language challenges my mind, enhances my memory, and provides opportunities for me to connect with people from different backgrounds. It’s a rewarding hobby that continually broadens my understanding of the world.</p>
             </li>
-            <li>
-                <h2>Outdoor Recreational Activities</h2> <br> <br>Exploring nature and staying active through outdoor adventures.<br> Whether hiking in the mountains or cycling through scenic trails, the great outdoors is my playground for relaxation and excitement.<br></h2>
-                <img src="img/Outdoor.jpg" alt="Outdoor Recreational Activities" class="hobby-image">
+
+
+            <li class="hobby-item">
+                <img src="img/Outdoor.jpg" alt="Outdoor Recreational Activities">
+                <h2>Outdoor Recreational Activities</h2>
+                <p>I love spending time outdoors and engaging in various recreational activities. Hiking through scenic trails, camping under the stars, and exploring nature’s beauty are some of my favorite ways to unwind and recharge. Being outside not only keeps me active but also allows me to connect with the environment and appreciate the simple joys of life. Whether it's trekking through mountains, swimming at a nearby lake, or taking a peaceful walk in the park, I find solace in the natural world and value every moment spent in it.</p>
+            </li>
+
+            <li class = "hobby-item">
+                <img src="img/photo.jpg" alt="Photography">
+                <h2>Photography</h2>
+                <p>I have a deep appreciation for photography, as it allows me to capture and preserve moments in time. Whether it's landscapes, candid shots of people, or detailed close-ups, I enjoy exploring the world through a camera lens. Photography enhances my creativity and challenges me to see beauty in everyday life. It’s a way for me to tell stories without words, and I love experimenting with different angles, lighting, and perspectives to create unique images.</p>
+            </li>
+
+            <li class = "hobby-item">
+                <img src="img/Cooking.JPG" alt="Cooking and Baking">
+                <h2>Cooking and Baking</h2>
+                <p>Cooking and baking have become creative outlets for me where I can explore different cuisines and recipes. I love experimenting with new ingredients and techniques, whether it's trying my hand at making Korean dishes or perfecting my baking skills with pastries and cakes. Cooking is a relaxing activity that also gives me a chance to share meals with friends and family, adding a personal touch to gatherings.</p>
             </li>
         </ul>
     </section>
+    <footer>
+        <p>&copy; 2024 A_Kyla Bangachon. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>

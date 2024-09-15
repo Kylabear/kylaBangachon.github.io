@@ -4,71 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
-    <link rel="stylesheet" href="style.css">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
     <style>
-
         body {
-            font-family: Garamond, serif;
+            font-family: 'Montserrat', sans-serif;
             margin: 0;
-            background-color: #f4f4f4;
-            color: #e4dfdf;
-            background-image: url('img/HomeC.jpg'); 
-            background-size: cover; 
-            background-position: center; 
+            background-color: #1e53c6;
+            color: #100f0f;
+            background-image: url('img/HomeC.jpg');
+            background-size: cover;
+            background-position: center;
             background-repeat: no-repeat;
         }
 
         header {
             text-align: center;
-            background-color: #0f1011f9;
-            padding: 20px;
-            width: 100%;
+            background-color: rgba(15, 16, 17, 0.651);
+            padding: 30px;
+            color: #ffffff;
+            font-size: 1em;
         }
 
         section {
             text-align: center;
-            margin: 20px;
-            padding: 20px;
-            background: transparent;
+            margin: 30px auto;
+            padding: 30px;
+            width: 80%;
+            max-width: 900px;
             border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
+        section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #eee3e3;
+        }
+
+        section p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #ede4e4;
+        }
+
+        img {
+            width: 180px;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
 
         .tab-container {
-            width: 80%;
-            margin: 50px auto;
+            text-align: center;
+            margin: 40px auto;
         }
 
         .tab {
             display: inline-block;
             background-color: #333;
             color: #fff;
-            padding: 10px 20px;
+            padding: 15px 25px;
+            margin: 0 5px;
+            border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s;
-            margin: 0 10px;
-            border-radius: 5px;
         }
 
-        .tab:hover {
+        .tab:hover, .tab.active {
             background-color: #555;
         }
 
         .tab-content {
-            display: none; 
-            margin-top: 20px;
+            display: none;
+            margin: 20px auto;
             padding: 20px;
             border-radius: 10px;
-            color: white;
             max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            background-size: cover; 
-            background-position: center;
-            background-repeat: no-repeat;
-            position: relative;
-            overflow: hidden;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .active-tab-content {
@@ -76,78 +90,102 @@
         }
 
         .tab-content h2 {
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            font-size: 1.8em;
+            color: #fff;
         }
 
         .tab-content p, .tab-content ul, .tab-content blockquote {
-            padding: 15px;
-            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .tab-content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .tab-content ul li {
+            padding: 10px;
+            font-size: 1.2em;
+            background-color: rgba(255, 255, 255, 0.1);
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+
+        .hobbies-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .hobbies-list li {
+            padding: 10px;
+            font-size: 1.2em;
         }
 
         footer {
-            padding: 20px;
             text-align: center;
+            padding: 30px;
+            background-color: rgba(15, 16, 17, 0.95);
+            color: #fff;
         }
 
         .footer-icons {
+            list-style: none;
+            padding: 0;
             display: flex;
             justify-content: center;
-            padding: 0;
-            list-style: none;
         }
 
         .footer-icons li {
-            margin: 0 10px;
+            margin: 0 15px;
         }
 
         .footer-icons img {
-            width: 24px;
-            height: 24px;
-            transition: transform 0.3s;
+            width: 30px;
+            height: 30px;
+            transition: transform 0.3s ease;
         }
 
         .footer-icons img:hover {
             transform: scale(1.2);
         }
 
-
-        #education {
-            background-image: url('img/educatio.jpg');
-        }
-
-        #goals {
-            background-image: url('img/goal.jpg');
-        }
-
-        #personal-philosophy {
-            background-image: url('img/perso.jpg');
-        }
-
-        #fun-facts {
-            background-image: url('img/fun.jpg');
-        }
-
-
         @media (max-width: 768px) {
+            section {
+                width: 90%;
+            }
+
+            header {
+                font-size: 2em;
+            }
+
             .tab {
-                padding: 8px 15px;
-                font-size: 14px;
+                padding: 10px 20px;
             }
 
             .tab-content {
-                font-size: 14px;
+                font-size: 0.9em;
+            }
+
+            .hobbies-section {
+                padding: 20px;
             }
         }
 
         @media (max-width: 480px) {
+            section {
+                width: 95%;
+            }
+
             .tab {
-                padding: 5px 10px;
-                font-size: 12px;
+                padding: 8px 15px;
             }
 
             .tab-content {
-                font-size: 12px;
+                font-size: 0.85em;
+            }
+
+            .hobbies-section {
+                padding: 15px;
             }
         }
     </style>
@@ -157,10 +195,10 @@
         <h1>Welcome to My Personal Website!</h1>
     </header>
 
-    <section> 
-        <h2> About Me </h2>
-        <img src="img/kylaB.jpg.jpg" alt="My Profile Pic" style="width: 200px; border-radius: 25%; background: transparent;">
-        <p>Hello, I'm Alpha Kyla Bangachon, a passionate student <br>pursuing a Bachelor of Science in Information Technology<br> specializing in Web Development at the University of the Cordilleras,<br> Baguio City.My journey in web development began with a fascination for<br> the interaction of code<br> and design, and I aim to create engaging, user-friendly web experiences.</p>
+    <section>
+        <h2>About Me</h2>
+        <img src="img/kylaB.jpg.jpg" alt="My Profile Pic">
+        <p>Hello, I'm Alpha Kyla Bangachon, a passionate student pursuing a Bachelor of Science in Information Technology, specializing in Web Development at the University of the Cordilleras, Baguio City. My journey in web development began with a fascination for the interaction of code and design, and I aim to create engaging, user-friendly web experiences.</p>
     </section>
 
     <div class="tab-container">
@@ -170,24 +208,23 @@
         <div class="tab" onclick="openTab(event, 'fun-facts')">Fun Facts</div>
     </div>
 
-
-    <div id="education" class="tab-content">
+    <div id="education" class="tab-content"style="background-image: url('img/educatio.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <h2>Education</h2>
-        <p>I pursued Accountancy and Business Management at SMNHS SHS in Ifugao before embarking on my journey in Information Technology at the University of the Cordilleras.<br> This diverse educational background has provided me with a strong foundation in both the analytical and creative aspects of web development,<br> shaping my approach to solving complex problems and leading projects effectively.</p>
+        <p>I pursued Accountancy and Business Management at SMNHS SHS in Ifugao before embarking on my journey in Information Technology at the University of the Cordilleras. This diverse educational background has provided me with a strong foundation in both the analytical and creative aspects of web development, shaping my approach to solving complex problems and leading projects effectively.</p>
     </div>
 
-    <div id="goals" class="tab-content">
+    <div id="goals" class="tab-content"style="background-image: url('img/goal.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <h2>Goals & Aspirations</h2>
-        <p>In the short term, my goal is to complete my degree in Information Technology and gain practical experience through internships, setting the stage for my future career. Looking ahead, I aspire to become a full-stack web developer, leading innovative projects that address real-world challenges. This journey is driven by my passion for meaningful work and my commitment to making a difference through technology.</p>
+        <p>In the short term, my goal is to complete my degree in Information Technology and gain practical experience through internships. Looking ahead, I aspire to become a full-stack web developer, leading innovative projects that address real-world challenges. This journey is driven by my passion for meaningful work and my commitment to making a difference through technology.</p>
     </div>
 
-    <div id="personal-philosophy" class="tab-content">
+    <div id="personal-philosophy" class="tab-content"style="background-image: url('img/perso.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <h2>Personal Philosophy</h2>
         <blockquote>"Strive not to be a success, but rather to be of value." – Albert Einstein</blockquote>
-        <p>This quote resonates deeply with me, guiding my approach to both personal and professional growth.<br> I believe that true fulfillment comes from making a positive impact and creating value for others, rather than merely seeking success for its own sake.</p>
+        <p>This quote resonates deeply with me, guiding my approach to both personal and professional growth. I believe that true fulfillment comes from making a positive impact and creating value for others, rather than merely seeking success for its own sake.</p>
     </div>
 
-    <div id="fun-facts" class="tab-content">
+    <div id="fun-facts" class="tab-content"style="background-image: url('img/fun.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <h2>Fun Facts About Me</h2>
         <ul>
             <li>I can solve a Rubik’s cube in under 1 minute and 30 seconds.</li>
@@ -201,10 +238,10 @@
         </ul>
     </div>
 
-    <div class="contact-section">
-        <p>Thank you for visiting my personal website! I’m excited about the future and always open to new opportunities and connections.<br> Whether you have a question, a project in mind, or just want to chat about web development or any of my interests, feel free to reach out.<br> You can contact me through your preferred contact method or connect with me on social media. I look forward to hearing from you!</p>
-    </div>    
     <footer>
+        <div class="contact-section">
+            <p>Thank you for visiting my personal website! I’m excited about the future and always open to new opportunities and connections.<br> Feel free to reach out via social media or email!</p>
+        </div>
         <ul class="footer-icons">
             <li><a href="https://www.facebook.com/kyla.b3ar/"><img src="img/Fb_logo.jpg" alt="Facebook"></a></li>
             <li><a href="https://www.instagram.com/kyla.b3ar"><img src="img/IG_logo.jpg" alt="Instagram"></a></li>
@@ -213,20 +250,18 @@
     </footer>
 
     <script>
-
         function openTab(evt, tabName) {
-
             var tabContents = document.querySelectorAll('.tab-content');
             tabContents.forEach(function(content) {
                 content.classList.remove('active-tab-content');
             });
 
-            document.getElementById(tabName).classList.add('active-tab-content');
-
             var tabs = document.querySelectorAll('.tab');
             tabs.forEach(function(tab) {
                 tab.classList.remove('active');
             });
+    
+            document.getElementById(tabName).classList.add('active-tab-content');
             evt.currentTarget.classList.add('active');
         }
     </script>
